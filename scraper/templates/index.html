@@ -63,7 +63,11 @@
     ul {
         padding-inline-start: 0px !important;
     }
-
+    
+    .pub {
+        font-size: 12px;
+        color: gray;
+    }
 </style>
 
 <body style="margin: 0px; background-color: #f0f1f3;">
@@ -77,8 +81,8 @@
                 <span class="claps">{{ articles.clapStr }}</span>
                 <span class="title">
                     <a href="{{ articles.url }}" style="font-family: Verdana, Geneva, sans-serif; text-decoration: none; color: black; font-size: 14px; overflow: hidden; text-overflow: ellipsis;">{{ articles.title }}</a>
-                    <span class="host">
-                        <a>{{ articles.tag }}</a>
+                    <span class="pub">
+                        (<a>{{ articles.publication }}</a>)
                     </span>
                 </span>
                 <br>
