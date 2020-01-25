@@ -1,0 +1,94 @@
+<style>
+    .article-view {
+        max-width: 800px;
+        margin: 0 auto;
+        position: relative;
+        margin-top: 20px;
+    }
+
+    .claps {
+        color: #00adb5;
+        font-size: 1em;
+        font-weight: 500;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 80px;
+        text-align: center;
+        margin-top: -10px;
+    }
+    .news-item {
+        background-color: #fff;
+        padding: 20px 30px 20px 80px;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        line-height: 20px;
+    }
+    .meta {
+        font-size: .85em;
+        color: #828282;
+    }
+    .scrollmenu {
+        overflow:auto;
+        white-space: nowrap;
+        max-width: 800px;
+        box-sizing: border-box;
+        margin: 0 auto;
+        padding: 5px 5px;
+    }
+    .scrollmenu a {
+        display: inline-block;
+        text-align: center;
+        text-decoration: none;
+        font-size: 0.9em;
+        padding: 5px;
+
+    }
+    .scrollmenu a {
+        color: black;
+    }
+
+    div::-webkit-scrollbar {
+    width: 1em;
+    height: 0.5em;
+    border-radius: 10px;
+}
+
+    div::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 0px solid slategrey;
+    border-radius: 10px;
+    }
+
+    ul {
+        padding-inline-start: 0px !important;
+    }
+
+</style>
+
+<body style="margin: 0px; background-color: #f0f1f3;">
+    {% include "header.html" %}
+    <div class="article-view">
+        <ul>
+            {% if topArticles %}
+            {% for articles in topArticles %}
+            <li class="news-item"
+                style="list-style-type:none; background-color: #fff; padding: 20px 30px 20px 80px; line-height: 20px; border-bottom: 1px solid #eee">
+                <span class="claps">{{ articles.clapStr }}</span>
+                <span class="title">
+                    <a href="{{ articles.url }}" style="font-family: Verdana, Geneva, sans-serif; text-decoration: none; color: black; font-size: 14px; overflow: hidden; text-overflow: ellipsis;">{{ articles.title }}</a>
+                    <span class="host">
+                        <a>{{ articles.tag }}</a>
+                    </span>
+                </span>
+                <br>
+                <span class="meta">
+                    <span class="tag"><a href="/tag/{{ articles.tag }}">{{ articles.tag }}</a></span>
+                </span>
+            </li>
+            {% endfor %}
+            {% endif %}
+
+        </ul>
+    </div>
+</body>
