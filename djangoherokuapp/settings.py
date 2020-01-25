@@ -25,7 +25,7 @@ SECRET_KEY = '$-s6e&6ief5+gkib^$1@lxh4r8k-2$p^lfgu(9^@xtrhpyjma6'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['agile-dawn-41286.herokuapp.com','127.0.0.1' ]
+ALLOWED_HOSTS = ['medium-highlights.herokuapp.com','127.0.0.1' ]
 
 
 # Application definition
