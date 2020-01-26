@@ -8,9 +8,10 @@ Django project to crawl links of top articles from the medium archive using beau
 
 https://medium-highlights.herokuapp.com/
 
-![Screen Shot 2020-01-26 at 1.49.09 PM]()
+![demo screenshot](https://i.imgur.com/nE6mysX.png)
 
-###If you install the mediumship chrome extension, you can bypass the paywall
+
+If you install the mediumship chrome extension, you can bypass the paywall
 
 https://github.com/swapagarwal/mediumship
 
