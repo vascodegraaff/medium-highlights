@@ -80,10 +80,9 @@
                 style="list-style-type:none; background-color: #fff; padding: 20px 30px 20px 80px; line-height: 20px; border-bottom: 1px solid #eee">
                 <span class="claps">{{ articles.clapStr }}</span>
                 <span class="title">
-                    <a href="{{ articles.url }}"
-                        style="font-family: Verdana, Geneva, sans-serif; text-decoration: none; color: black; font-size: 14px; overflow: hidden; text-overflow: ellipsis;">{{ articles.title }}</a>
-                    <span class="host">
-                        <a>{{ articles.tag }}</a>
+                    <a href="{{ articles.url }}" style="font-family: Verdana, Geneva, sans-serif; text-decoration: none; color: black; font-size: 14px; overflow: hidden; text-overflow: ellipsis;">{{ articles.title }}</a>
+                    <span class="pub">
+                        (<a>{{ articles.publication }}</a>)
                     </span>
                 </span>
                 <br>
