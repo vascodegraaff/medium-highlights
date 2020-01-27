@@ -79,10 +79,10 @@ def scrape(request):
                     
                 except AttributeError:
                     pass
-    return redirect('/')
+    return redirect('/clear')
 
 def clear(request):
     for row in Article.objects.all():
         if Article.objects.filter(title = row.title).count() > 1:
             row.delete()
-    return HttpResponse('completed duplicate clearing')
+    return redirect('/')
