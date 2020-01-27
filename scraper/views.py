@@ -79,7 +79,8 @@ def scrape(request):
                     
                 except AttributeError:
                     pass
-    return redirect('/clear')
+                # not sure how to run clear function after running the scrape function
+    return redirect('/')
 
 def clear(request):
     for row in Article.objects.all():
